@@ -1,0 +1,72 @@
+#include <stdio.h>
+#include <unistd.h>
+
+int ft_putchar(void);
+int row = 1;
+int col;
+int m = 8; //rush input parameter
+int n = 8; //rush input parameter
+
+int main() 
+{
+
+
+//void    rush(int row, int col)
+
+while (row <= m)
+{
+    col = 1;
+
+        while (col <= n)
+        {
+            ft_putchar();
+            col++;
+        }
+    
+    printf("\n");
+    row++;
+
+}
+
+return 0;
+}
+
+
+
+int ft_putchar(void)
+{
+if (row == 1 && col == 1)
+{
+    printf("A");
+}
+else if (row == m && col == n)
+{
+    printf("C");
+}
+else if (row == m && col == 1)
+{
+    printf("A");
+}
+else if (row == 1 && col == n)
+{
+    printf("C");
+}
+else if ((row > 1 && col == 1) || (row > 1 && col == n))
+{
+    {
+        printf("B");
+    }
+}
+
+else if ((col > 1 && row == 1) || (col > 1 && row == m))
+{
+    {
+        printf("B");
+    }
+}
+
+else
+{
+    printf(" ");
+}
+}
